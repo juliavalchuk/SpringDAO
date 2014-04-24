@@ -1,11 +1,11 @@
-package ua.epam.spring.domain;
+package ua.epam.spring.library.writer;
 
 /**
  * Created by julia
  */
 public class Writer {
-    Integer writerId;
-    String writerName;
+    private Integer writerId;
+    private String writerName;
 
     public Integer getWriterId() {
         return writerId;

@@ -1,6 +1,6 @@
-package ua.epam.spring.repository;
+package ua.epam.spring.library.genre;
 
-import ua.epam.spring.domain.Genre;
+import ua.epam.spring.library.genre.Genre;
 
 import java.util.List;
 
@@ -9,6 +9,7 @@ import java.util.List;
  */
 public interface GenreRepository {
     Genre find(Integer id);
+    List<Genre> find(List<Integer> ids);
     Genre findByName(String name);
     List<Genre> findAll();
     boolean create(Genre genre);

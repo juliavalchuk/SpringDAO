@@ -1,12 +1,19 @@
-package ua.epam.spring.domain;
+package ua.epam.spring.library.genre;
 
 /**
  * Created by julia
  */
 public class Genre {
 
-    Integer genreId;
-    String genreName;
+    private Integer genreId;
+    private String genreName;
+
+    public Genre() {
+    }
+
+    public Genre(String genreName) {
+        this.genreName = genreName;
+    }
 
     public Integer getGenreId() {
         return genreId;

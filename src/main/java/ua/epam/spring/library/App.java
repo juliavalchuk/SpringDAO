@@ -1,4 +1,4 @@
-package ua.epam.spring;
+package ua.epam.spring.library;
 
 /**
  * Created by julia

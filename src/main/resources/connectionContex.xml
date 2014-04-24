@@ -27,7 +27,7 @@
         <property name="releaseHelperThreads" value="3"/>
     </bean>
 
-    <bean name="bookRepositoty" class="ua.epam.spring.repository.BookRepositoryJDBC" autowire="byType"/>
+    <bean name="bookRepositoty" class="ua.epam.spring.library.book.BookRepositoryJDBC" autowire="byType"/>
 
 
 </beans>

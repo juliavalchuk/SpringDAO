@@ -1,4 +1,7 @@
-package ua.epam.spring.domain;
+package ua.epam.spring.library.book;
+
+import ua.epam.spring.library.genre.Genre;
+import ua.epam.spring.library.writer.Writer;
 
 import java.util.List;
 
@@ -6,13 +9,13 @@ import java.util.List;
  * Created by julia
  */
 public class Book {
-    Integer bookId;
-    String bookTitle;
-    String bookInformation;
-    Double bookMortgage;
-    Double bookRent;
-    List<Writer> writers;
-    List<Genre> genres;
+    private Integer bookId;
+    private String bookTitle;
+    private String bookInformation;
+    private Double bookMortgage;
+    private Double bookRent;
+    private List<Writer> writers;
+    private List<Genre> genres;
 
     public Integer getBookId() {
         return bookId;
