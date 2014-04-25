@@ -7,25 +7,4 @@
 
     <bean name="bookRepositoryJDBC" class="ua.epam.spring.library.book.BookRepositoryJDBC" autowire="constructor"/>
 
-    <bean name="book1" class="ua.epam.spring.library.book.Book"
-        p:bookTitle="Book1"
-        p:bookInformation="Some information"
-        p:bookRent="10"
-        p:bookMortgage="45"
-    />
-
-    <bean name="book2" class="ua.epam.spring.library.book.Book"
-          p:bookTitle="Book2"
-          p:bookInformation="The best book"
-          p:bookRent="15"
-          p:bookMortgage="45"
-            />
-
-    <bean name="book3" class="ua.epam.spring.library.book.Book"
-          p:bookTitle="Book3"
-          p:bookInformation="Read it!"
-          p:bookRent="5"
-          p:bookMortgage="25"
-            />
-
 </beans>

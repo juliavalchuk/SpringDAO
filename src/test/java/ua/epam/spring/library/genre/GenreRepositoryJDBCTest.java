@@ -20,7 +20,7 @@ import static org.junit.Assert.*;
  * Created by Yuliia_Valchuk on 4/23/2014.
  */
 
-@ContextConfiguration(locations = {"/connectionContextTest.xml", "/genreContex.xml"})
+@ContextConfiguration(locations = { "/genreContex.xml"})
 public class GenreRepositoryJDBCTest extends RepositoryTest{
     @Autowired
     private GenreRepository genreRepository;

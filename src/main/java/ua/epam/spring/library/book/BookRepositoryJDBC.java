@@ -15,7 +15,7 @@ import java.util.List;
 public class BookRepositoryJDBC implements BookRepository{
     private JdbcTemplate jdbcTemplate;
 
-    public void setDataSource(DataSource dataSource) {
+    public BookRepositoryJDBC(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
@@ -31,8 +31,8 @@ public class BookRepositoryJDBC implements BookRepository{
     @Override
     public Book getBookIfExist(Book book) {
         try {
-            return jdbcTemplate.queryForObject("select * from book where title = ? and information = ? and rent = ? and mortgage = ?", new BookMapper(),
-                    book.getBookTitle(), book.getBookInformation(), book.getBookRent(), book.getBookMortgage());
+            return jdbcTemplate.queryForObject("select * from book where title = ? and rent = ? and mortgage = ?", new BookMapper(),
+                    book.getBookTitle(), book.getBookRent(), book.getBookMortgage());
         } catch (DataAccessException e) {
             return null;
         }

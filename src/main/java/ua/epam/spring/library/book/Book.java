@@ -17,6 +17,15 @@ public class Book {
     private List<Writer> writers;
     private List<Genre> genres;
 
+    public Book() {
+    }
+
+    public Book(String bookTitle, Double bookMortgage, Double bookRent) {
+        this.bookTitle = bookTitle;
+        this.bookMortgage = bookMortgage;
+        this.bookRent = bookRent;
+    }
+
     public Integer getBookId() {
         return bookId;
     }

@@ -7,6 +7,13 @@ public class Writer {
     private Integer writerId;
     private String writerName;
 
+    public Writer() {
+    }
+
+    public Writer(String writerName) {
+        this.writerName = writerName;
+    }
+
     public Integer getWriterId() {
         return writerId;
     }

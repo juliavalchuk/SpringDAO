@@ -1,5 +1,6 @@
 CREATE TABLE Book(
     id IDENTITY not null ,
+  -- add cover
     title varchar(30),
     information varchar(30),
     mortgage double  not null,
@@ -20,12 +21,12 @@ CREATE TABLE GenresPool(
   id IDENTITY not null,
   book_id int not null,
   genre_id int not null
- -- CONSTRAINT student_cat_pk PRIMARY KEY (student_id, group_id)
+  --CONSTRAINT genrespool_cat_pk foreign key (book_id, genre_id)
 );
 
 CREATE TABLE WritersPool(
   id IDENTITY not null,
   book_id int not null,
   writer_id int not null
- -- CONSTRAINT student_cat_pk PRIMARY KEY (student_id, group_id)
+  --CONSTRAINT writerspool_cat_pk foreign key (book_id, writer_id)
 );

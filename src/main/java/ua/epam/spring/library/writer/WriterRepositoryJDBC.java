@@ -17,7 +17,7 @@ import java.util.List;
 public class WriterRepositoryJDBC implements WriterRepository{
     private JdbcTemplate jdbcTemplate;
 
-    public void setDataSource(DataSource dataSource) {
+    public WriterRepositoryJDBC(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
