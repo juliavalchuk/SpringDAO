@@ -5,17 +5,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.test.context.ContextConfiguration;
 import ua.epam.spring.library.RepositoryTest;
-import ua.epam.spring.library.genre.Genre;
-import ua.epam.spring.library.genre.GenreRepository;
-import ua.epam.spring.library.writer.WriterRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 

@@ -4,7 +4,6 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
-import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -15,8 +14,8 @@ import java.util.List;
 public class BookRepositoryJDBC implements BookRepository{
     private JdbcTemplate jdbcTemplate;
 
-    public BookRepositoryJDBC(DataSource dataSource) {
-        this.jdbcTemplate = new JdbcTemplate(dataSource);
+    public BookRepositoryJDBC(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
     }
 
     @Override

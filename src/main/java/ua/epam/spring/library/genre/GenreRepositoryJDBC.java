@@ -4,7 +4,6 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
-import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -16,8 +15,8 @@ import java.util.List;
 public class GenreRepositoryJDBC implements GenreRepository {
     private JdbcTemplate jdbcTemplate;
 
-    public GenreRepositoryJDBC(DataSource dataSource) {
-        this.jdbcTemplate = new JdbcTemplate(dataSource);
+    public GenreRepositoryJDBC(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
     }
 
     @Override

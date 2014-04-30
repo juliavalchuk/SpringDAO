@@ -3,9 +3,7 @@ package ua.epam.spring.library.writer;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import ua.epam.spring.library.writer.Writer;
 
-import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -17,8 +15,8 @@ import java.util.List;
 public class WriterRepositoryJDBC implements WriterRepository{
     private JdbcTemplate jdbcTemplate;
 
-    public WriterRepositoryJDBC(DataSource dataSource) {
-        this.jdbcTemplate = new JdbcTemplate(dataSource);
+    public WriterRepositoryJDBC(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
     }
 
     @Override
